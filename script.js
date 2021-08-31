@@ -107,7 +107,6 @@ function countdown() {
   if (timeLeft == 0) {
     return false;
   }
-
   
   timeInterval = setInterval(function () {
 
