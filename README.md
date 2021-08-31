@@ -30,7 +30,7 @@ THEN I can save my initials and my score
 
 ![index.html screenshot](./assets/start.png)
 
-[Click me for website](https://mt0814.github.io/Week4-HW-Coding-Quiz/)
+[Click me for website](https://mt0814.github.io/Week4-HW-Code-Quiz/)
 
 ---
 
