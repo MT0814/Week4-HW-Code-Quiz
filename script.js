@@ -95,7 +95,7 @@ var restartButton = document.getElementById("restart-btn");
 var resultsContainerEl = document.getElementById("results-container");
 let shuffledQuestions, currentQuestionIndex;
 var timeInterval;
-var timeLeft = 40;
+var timeLeft = 50;
 
 startButton.addEventListener("click", startGame);
 nextButton.addEventListener("click", () => {
@@ -108,22 +108,17 @@ function countdown() {
     return false;
   }
 
-  // Use the `setInterval()` method to call a function to be executed every 1000 milliseconds
+  
   timeInterval = setInterval(function () {
-    // As long as the `timeLeft` is greater than 1
+
     if (timeLeft > 1) {
-      // Set the `textContent` of `timerEl` to show the remaining seconds
       timerEl.textContent = timeLeft + "s left";
-      // Decrement `timeLeft` by 1
       timeLeft--;
     } else if (timeLeft === 1) {
-      // When `timeLeft` is equal to 1, rename to 'second' instead of 'seconds'
       timerEl.textContent = timeLeft + "s left";
       timeLeft--;
     } else {
-      // Once `timeLeft` gets to 0, set `timerEl` to an empty string
       timerEl.textContent = "";
-      // Use `clearInterval()` to stop the timer
       clearInterval(timeInterval);
       stopGame();
       resultsContainerEl.classList.remove("hide");
@@ -147,7 +142,7 @@ function setNextQuestion() {
 }
 
 function showQuestion(question) {
-  if (currentQuestionIndex === 9) {
+  if (currentQuestionIndex === 10) {
     stopGame();
     return;
   }
@@ -212,7 +207,7 @@ function setStatusClass(element, correct) {
 function saveHighScores(event) {
   event.preventDefault();
   var initials = document.querySelector("#name").value;
-  var score = initials + " " + timeLeft;
+  var score = initials + " "+" "+" " + timeLeft;
   console.log(score);
 
   // var highScores = localStorage.getItem("highscores") || [];

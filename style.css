@@ -228,7 +228,9 @@ li {
 header {
   font-size: 3em;
   color: var(--orange);
+  font-weight: 600;
   text-align: center;
+  border-bottom: 1px solid lightgray;
 }
 
 .high-scores-names {
@@ -236,6 +238,9 @@ header {
   font-weight: 500;
   color: var(--orange);
   text-align: center;
+  border-bottom: 1px solid lightgray;
+  margin: 10px;
+  padding-bottom: 10px;
 }
 
 .go-back-btn {
@@ -245,6 +250,7 @@ header {
   padding: 10px 20px;
   align-items: center;
   text-align: center;
+  float: right;
 }
 
 .high-scores-box {
