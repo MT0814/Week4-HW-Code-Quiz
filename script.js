@@ -97,6 +97,7 @@ let shuffledQuestions, currentQuestionIndex;
 var timeInterval;
 var timeLeft = 50;
 
+
 startButton.addEventListener("click", startGame);
 nextButton.addEventListener("click", () => {
   currentQuestionIndex++;
@@ -107,22 +108,26 @@ function countdown() {
   if (timeLeft == 0) {
     return false;
   }
-  
-  timeInterval = setInterval(function () {
 
+  timeInterval = setInterval(function () {
+ 
     if (timeLeft > 1) {
-      timerEl.textContent = timeLeft + "s left";
+      timerEl.textContent = timeLeft + "s";
       timeLeft--;
     } else if (timeLeft === 1) {
-      timerEl.textContent = timeLeft + "s left";
+      timerEl.textContent = timeLeft + "s";
       timeLeft--;
-    } else {
+    }
+
+     else {
       timerEl.textContent = "";
       clearInterval(timeInterval);
       stopGame();
       resultsContainerEl.classList.remove("hide");
     }
   }, 1000);
+
+  
 }
 
 function startGame() {
@@ -199,7 +204,8 @@ function setStatusClass(element, correct) {
   if (correct) {
     element.classList.add("correct");
   } else {
-    element.classList.add("wrong");
+    element.classList.add("wrong")
+    timeLeft --;
   }
 }
 

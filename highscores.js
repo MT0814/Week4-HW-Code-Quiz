@@ -1,3 +1,6 @@
+var clearHistoryButton = document.querySelector('#clear-history-btn')
+
+
 
 function getHighScores() {
   //   var highScores = localStorage.getItem("highscores");
@@ -12,12 +15,17 @@ function getHighScores() {
     iniName.textContent = 'Name: ' + highScores[i] + ' points';
 
   }
-  
-    
-
   }
 
 
 getHighScores();
+
+clearHistoryButton.addEventListener("click", clearHistory);
+function clearHistory() {
+  // localStorage.getItem('highscores');
+  localStorage.clear()
+  location.reload();
+}
+
 
    
