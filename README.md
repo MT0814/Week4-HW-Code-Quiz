@@ -33,9 +33,11 @@ THEN I can save my initials and my score
 
 Uses addEventlistener, getElementById, classList.add/remove, if, for loop, JSON, timer, etc.
 
-## License 
 
-[![License: MIT License](https://img.shields.io/badge/License-MIT%20License-yellow.svg)](https://www.gnu.org/licenses/MIT%20License)
+## License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 
 ## Others
 ![index.html screenshot](./assets/start.png)
